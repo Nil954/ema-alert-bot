@@ -51,7 +51,7 @@ EMA_TREND_SLOW = 400
 
 RSI_LENGTH = 14
 
-TOUCH_BUFFER_PCT = 0.001        # 0.1%
+TOUCH_BUFFER_PCT = 0.0          # 0 = exact touch only
 RESET_DISTANCE_PCT = 0.003      # 0.3%
 
 STATE_FILE = Path(__file__).parent / "state.json"
