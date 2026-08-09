@@ -76,7 +76,7 @@ log = logging.getLogger("ema_bot")
 # Data fetching
 # ============================================================
 
-BINANCE_KLINES_URL = "https://fapi.binance.com/fapi/v1/klines"
+BINANCE_KLINES_URL = "https://data-api.binance.vision/api/v3/klines"
 
 
 def fetch_klines(symbol: str, interval: str, limit: int) -> pd.DataFrame:
