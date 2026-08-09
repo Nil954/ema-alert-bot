@@ -224,7 +224,8 @@ def process_symbol(symbol: str, state: dict) -> None:
     sell_regime = (ema200 < ema400) and (ema54 < ema101)
 
     log.info(
-        f"{symbol} close={price:.4f} ema54={ema54:.4f} ema101={ema101:.4f} "
+        f"{symbol} close={price:.4f} high={high:.4f} low={low:.4f} "
+        f"ema54={ema54:.4f} ema101={ema101:.4f} "
         f"ema200={ema200:.4f} ema400={ema400:.4f} rsi={rsi_value:.2f} "
         f"buy_regime={buy_regime} sell_regime={sell_regime}"
     )
@@ -246,6 +247,11 @@ def process_symbol(symbol: str, state: dict) -> None:
 
             is_touch = touches(high, low, ema_value, TOUCH_BUFFER_PCT)
             distance_pct = abs(price - ema_value) / ema_value
+
+            log.info(
+                f"  check {k}: ema_value={ema_value:.4f} touch={is_touch} "
+                f"armed={slot['armed']} distance_pct={distance_pct*100:.3f}%"
+            )
 
             if is_touch and slot["armed"]:
                 subject = f"[EMA Alert] {symbol} {direction.upper()} — EMA{ema_level} touch"
