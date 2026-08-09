@@ -30,6 +30,7 @@ import smtplib
 import logging
 from email.mime.text import MIMEText
 from datetime import timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import requests
@@ -51,8 +52,10 @@ EMA_TREND_SLOW = 400
 
 RSI_LENGTH = 14
 
-TOUCH_BUFFER_PCT = 0.0          # 0 = exact touch only
+TOUCH_BUFFER_PCT = 0.0          # 0 = exact touch only (candle high/low must actually cross the EMA line)
 RESET_DISTANCE_PCT = 0.003      # 0.3%
+
+ALERT_TIMEZONE = ZoneInfo("Asia/Kolkata")  # candle time in emails is shown in this timezone
 
 STATE_FILE = Path(__file__).parent / "state.json"
 
@@ -174,6 +177,7 @@ def send_email_alert(subject: str, body: str) -> None:
 
 
 def format_alert(symbol, direction, ema_level, ema_value, price, rsi_value, candle_time):
+    candle_time_local = candle_time.tz_convert(ALERT_TIMEZONE)
     return (
         f"{symbol} — {direction.upper()} zone touch on EMA{ema_level}\n\n"
         f"Pair:        {symbol}\n"
@@ -181,7 +185,7 @@ def format_alert(symbol, direction, ema_level, ema_value, price, rsi_value, cand
         f"EMA touched: EMA{ema_level} ({ema_value:.4f})\n"
         f"Close price: {price:.4f}\n"
         f"RSI(14):     {rsi_value:.2f}\n"
-        f"Candle time (UTC): {candle_time}\n"
+        f"Candle time (IST): {candle_time_local.strftime('%Y-%m-%d %H:%M:%S')}\n"
     )
 
 
