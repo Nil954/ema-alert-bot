@@ -20,8 +20,8 @@
     "regime_active": false
   },
   "SOLUSDT:54:sell": {
-    "armed": true,
-    "regime_active": false
+    "armed": false,
+    "regime_active": true
   },
   "SOLUSDT:101:buy": {
     "armed": true,
@@ -29,6 +29,6 @@
   },
   "SOLUSDT:101:sell": {
     "armed": true,
-    "regime_active": false
+    "regime_active": true
   }
 }
