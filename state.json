@@ -16,7 +16,7 @@
     "regime_active": true
   },
   "SOLUSDT:54:buy": {
-    "armed": true,
+    "armed": false,
     "regime_active": true
   },
   "SOLUSDT:54:sell": {
