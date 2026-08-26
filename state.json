@@ -1,6 +1,6 @@
 {
   "BTCUSDT:54:buy": {
-    "armed": false,
+    "armed": true,
     "regime_active": true
   },
   "BTCUSDT:54:sell": {
@@ -8,7 +8,7 @@
     "regime_active": false
   },
   "BTCUSDT:101:buy": {
-    "armed": false,
+    "armed": true,
     "regime_active": true
   },
   "BTCUSDT:101:sell": {
@@ -28,7 +28,7 @@
     "regime_active": false
   },
   "SOLUSDT:101:sell": {
-    "armed": false,
+    "armed": true,
     "regime_active": true
   }
 }
