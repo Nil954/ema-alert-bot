@@ -1,1 +1,22 @@
-{}
+{
+  "BTCUSDT": {
+    "buy": {
+      "state": "watching",
+      "last_alert_time": null
+    },
+    "sell": {
+      "state": "watching",
+      "last_alert_time": null
+    }
+  },
+  "SOLUSDT": {
+    "buy": {
+      "state": "watching",
+      "last_alert_time": null
+    },
+    "sell": {
+      "state": "watching",
+      "last_alert_time": null
+    }
+  }
+}
