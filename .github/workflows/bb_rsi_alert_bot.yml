@@ -28,7 +28,7 @@ jobs:
           GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.ALERT_TO_EMAIL }}
-        run: python test_alert_email.py
+        run: python bb_rsi_alert_bot.py
 
       - name: Commit updated state
         run: |
