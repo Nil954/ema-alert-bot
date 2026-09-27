@@ -5,8 +5,8 @@
       "last_alert_time": 1790455843.0162315
     },
     "sell": {
-      "state": "rearmed",
-      "last_alert_time": 1790502642.4453895
+      "state": "cooldown",
+      "last_alert_time": 1790504142.6353803
     }
   },
   "SOLUSDT": {
