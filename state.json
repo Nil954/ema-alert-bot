@@ -15,8 +15,8 @@
       "last_alert_time": 1790891142.816896
     },
     "sell": {
-      "state": "watching",
-      "last_alert_time": 1790830245.0806258
+      "state": "cooldown",
+      "last_alert_time": 1790900732.772123
     }
   }
 }
