@@ -11,8 +11,8 @@
   },
   "SOLUSDT": {
     "buy": {
-      "state": "rearmed",
-      "last_alert_time": 1792059939.4551644
+      "state": "cooldown",
+      "last_alert_time": 1792106735.4636862
     },
     "sell": {
       "state": "watching",
