@@ -5,7 +5,7 @@
       "last_alert_time": 1793235934.87912
     },
     "sell": {
-      "state": "rearmed",
+      "state": "watching",
       "last_alert_time": 1793284536.228157
     }
   },
@@ -15,8 +15,8 @@
       "last_alert_time": 1793235682.3557813
     },
     "sell": {
-      "state": "rearmed",
-      "last_alert_time": 1793284538.578954
+      "state": "cooldown",
+      "last_alert_time": 1793286651.2911327
     }
   }
 }
