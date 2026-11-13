@@ -1,8 +1,8 @@
 {
   "BTCUSDT": {
     "buy": {
-      "state": "rearmed",
-      "last_alert_time": 1794530449.2245631
+      "state": "cooldown",
+      "last_alert_time": 1794536146.2070885
     },
     "sell": {
       "state": "rearmed",
@@ -11,8 +11,8 @@
   },
   "SOLUSDT": {
     "buy": {
-      "state": "rearmed",
-      "last_alert_time": 1794493252.117888
+      "state": "cooldown",
+      "last_alert_time": 1794536147.6404912
     },
     "sell": {
       "state": "rearmed",
